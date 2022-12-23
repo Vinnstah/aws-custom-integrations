@@ -1,5 +1,6 @@
 import VaporRouting
 import Foundation
+import Models
 
 public enum SiteRoute: Equatable {
     case integrations(IntegrationsRoute)
@@ -16,7 +17,7 @@ public enum IntegrationsRoute: Equatable {
 
 public enum TasksRoute: Equatable {
     case create(Task)
-    case update
+    case update(UUID, Task)
     case delete
     case read
 }

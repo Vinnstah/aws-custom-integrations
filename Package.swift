@@ -16,8 +16,17 @@ let package = Package(
         .target(
             name: "App",
             dependencies: [
+                "Models",
                 .product(name: "Vapor", package: "vapor"),
                 vaporRouting
+            ],
+            swiftSettings: [
+                .unsafeFlags(["-cross-module-optimization"], .when(configuration: .release))
+            ]
+        ),
+        .target(
+            name: "Models",
+            dependencies: [
             ],
             swiftSettings: [
                 .unsafeFlags(["-cross-module-optimization"], .when(configuration: .release))
