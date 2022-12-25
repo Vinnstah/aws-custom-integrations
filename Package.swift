@@ -1,4 +1,4 @@
-// swift-tools-version:5.6
+// swift-tools-version:5.7
 import PackageDescription
 
 let vaporRouting: Target.Dependency = .product(name: "VaporRouting", package: "vapor-routing")
@@ -9,7 +9,7 @@ let package = Package(
        .macOS(.v12)
     ],
     dependencies: [
-        .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
+        .package(url: "https://github.com/vapor/vapor.git", from: "4.67.5"),
         .package(url: "https://github.com/pointfreeco/vapor-routing", from: "0.1.2"),
     ],
     targets: [
